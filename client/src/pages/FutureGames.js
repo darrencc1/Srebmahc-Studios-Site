@@ -5,3 +5,5 @@ function FutureGames(){
         </div>
     );
 }
+
+export default FutureGames;

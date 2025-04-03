@@ -6,3 +6,4 @@ function OurGames() {
         </div>
     );
 }
+export default OurGames;
