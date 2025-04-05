@@ -1,5 +1,3 @@
-// src/pages/Games/BoxDodge/BoxDodgeFirestore.js
-
 import { db } from '../../../firebase';
 import { collection, query, where, getDocs, addDoc, updateDoc } from 'firebase/firestore';
 
