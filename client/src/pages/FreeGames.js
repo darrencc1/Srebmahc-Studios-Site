@@ -1,16 +1,27 @@
 import React from 'react';
-import BoxDodgerGame from './Games/BoxDodge/BoxDodgerGame';
+import GameCanvas from './Games/BoxDodge/BoxDodgerGame';       
+import GameCanvasTower from './Games/TowerDefense/GameCanvasTower'; 
 
 function FreeGames() {
-    return(
-        <div style= {{ textAlign: 'center' }}>
-            <h2>🕹 Free Games</h2>
-            <p>Some Basic Browser Mini Games You can Play!</p>
-            <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '2rem'}}>
-                <BoxDodgerGame />
-                {/* Add More Games, Have available classes for students and kids for creating their own games. */}
-            </div>   
-        </div>
-    );
+  const handleGameOver = () => {
+    console.log("Box Dodger game over!");
+  };
+
+  return (
+    <div style={{ padding: '2rem' }}>
+      <h1>🎮 Free Games</h1>
+
+      <section>
+        <h2>🟥 Box Dodger</h2>
+        <GameCanvas onGameOver={handleGameOver} />
+      </section>
+
+      <section style={{ marginTop: '3rem' }}>
+        <h2>🟦 Tower Defense</h2>
+        <GameCanvasTower />
+      </section>
+    </div>
+  );
 }
+
 export default FreeGames;
