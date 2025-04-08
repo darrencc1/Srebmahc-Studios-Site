@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+transformers
+diffusers
+torch
+gradio
+pillow
+accelerate
+sentencepiece
+protobuf
