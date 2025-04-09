@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import ImagePrompt from './ImagePrompt';
 
 function Home() {
   const [message, setMessage] = useState('');
@@ -13,9 +14,9 @@ function Home() {
   return (
     <div>
       <h2>👾 Welcome to Srebmahc Studios</h2>
-      <p><strong>Backend says:</strong> {message}</p>
       <p>Explore our worlds. Play our games. Shape the future of indie gaming.</p>
-      <p>Enjoy some free games that are being made RIGHT NOW</p>
+      {message && <p style={{ fontStyle: 'italic' }}>{message}</p>}
+      <ImagePrompt />
     </div>
   );
 }
