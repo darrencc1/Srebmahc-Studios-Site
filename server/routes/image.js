@@ -1,10 +1,11 @@
 const express = require('express');
 const router = express.Router();
 const axios = require('axios');
+require('dotenv').config();
 
 // ***NGROK URL WILL CHANGE EVERYTIME RUNTIME IS CHANGED,****
 //IMPROVE this later when releasing/hosting website
-const COLAB_URL = "https://d81d-34-16-189-133.ngrok-free.app";
+const COLAB_URL = "https://0d6b-34-143-238-210.ngrok-free.app";
 
 router.post('/generate', async (req, res) => {
   try {

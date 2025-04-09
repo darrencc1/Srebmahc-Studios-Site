@@ -13,7 +13,9 @@ function ImagePrompt() {
     setErrorMsg('');
 
     try {
-      const res = await axios.post('http://localhost:5050/api/image/generate', { prompt });
+      const res = await axios.post('http://localhost:5050/api/image/generate', {
+        prompt
+      });
       const base64 = res.data.image_base64;
       setImageData(base64);
     } catch (err) {
